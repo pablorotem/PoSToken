@@ -97,10 +97,10 @@ contract ERC20 is ERC20Basic {
 
 
 /**
- * @title PoSTokenStandard
- * @dev the interface of PoSTokenStandard
+ * @title SmartCoinStandard
+ * @dev the interface of SmartCoinStandard
  */
-contract PoSTokenStandard {
+contract SmartCoinStandard {
     uint256 public stakeStartTime;
     uint256 public stakeMinAge;
     uint256 public stakeMaxAge;
@@ -111,11 +111,11 @@ contract PoSTokenStandard {
 }
 
 
-contract PoSToken is ERC20,PoSTokenStandard,Ownable {
+contract SmartCoin is ERC20,SmartCoinStandard,Ownable {
     using SafeMath for uint256;
 
-    string public name = "PoSToken";
-    string public symbol = "POS";
+    string public name = "SmartCoin";
+    string public symbol = "SMRT";
     uint public decimals = 18;
 
     uint public chainStartTime; //chain start time
@@ -153,7 +153,7 @@ contract PoSToken is ERC20,PoSTokenStandard,Ownable {
         _;
     }
 
-    function PoSToken() {
+    function SmartCoin() {
         maxTotalSupply = 10**25; // 10 Mil.
         totalInitialSupply = 10**24; // 1 Mil.
 
