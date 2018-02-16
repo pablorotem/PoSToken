@@ -71,11 +71,7 @@ contract Ownable {
 }
 
 
-/**
- * @title ERC20Basic
- * @dev Simpler version of ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/179
- */
+
 contract ERC20Basic {
     uint256 public totalSupply;
     function balanceOf(address who) constant returns (uint256);
@@ -154,8 +150,8 @@ contract SmartCoin is ERC20,SmartCoinStandard,Ownable {
     }
 
     function SmartCoin() {
-        maxTotalSupply = 10**25; // 10 Mil.
-        totalInitialSupply = 10**24; // 1 Mil.
+        maxTotalSupply = 30000000; // 30 Mil.
+        totalInitialSupply = 20000000; // 2 Mil.
 
         chainStartTime = now;
         chainStartBlockNumber = block.number;
